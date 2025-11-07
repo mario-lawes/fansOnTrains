@@ -28,7 +28,7 @@ Damit können Fans, Vereine oder Sicherheitsbehörden besser planen und Risiken 
   - Zugverbindungen als Linien
   - Bahnhöfe mit hoher Fanaufkommen als Heatmap
 ## Technologien
-- Python 3.12+
+- Python
   - Pandas – für Datenmanagement der Spielpläne und Zugverbindungen
   - Requests – zur Abfrage der DB-API
   - xml.etree.ElementTree – zum Parsen der XML-Antworten der DB-API
