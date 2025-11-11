@@ -1,35 +1,56 @@
-# Fan-Travel Analyzer
+# 🧳 Fan-Travel Analyzer
 
 ## Projektziel
-Dieses Projekt visualisiert Fanbewegungen rund um Bundesliga-Spiele auf einer interaktiven Karte.
-- Wann und wo Züge voller Fans sein könnten
-- Potenzielle Treffpunkte rivalisierender Fangruppen an Bahnhöfen oder in Zügen
-Ziel ist es, ein übersichtliches Lagebild der Fanströme zu erhalten – für Fans, Vereine und Sicherheitsbehörden.
 
-Dieses Projekt analysiert die Reisedaten von Fußballfans in Deutschland, um Einblicke in Zugauslastungen rund um Bundesliga-Spiele zu gewinnen. Es soll herausgefunden werden:
-Welche Züge voraussichtlich voll sein könnten, basierend auf den Spielterminen und -orten.
-Wo sich Fangruppen treffen könnten, insbesondere potenziell rivalisierende Gruppen, an Bahnhöfen oder in Zügen.
-Damit können Fans, Vereine oder Sicherheitsbehörden besser planen und Risiken reduzieren.
+In diesem Übungsprojekt möchte ich die potenziellen Reisebewegungen von Fußballfans in Deutschlan untersuchen, um **Zugauslastungen rund um Bundesliga-Spiele** besser einschätzen zu können.  
+Ziel ist es, **mögliche Engpässe und Fan-Hotspots** frühzeitig zu erkennen und dadurch eine **bessere Planung für Fans, Vereine und Sicherheitsbehörden** zu ermöglichen.
+
+Konkret soll analysiert werden:
+- Welche **Züge voraussichtlich stark ausgelastet** sein könnten – basierend auf Spielterminen und -orten.  
+- Wo sich **Fangruppen treffen könnten**, insbesondere rivalisierende Gruppen an Bahnhöfen oder in Zügen.  
+
+---
 
 ## Funktionsweise
-1. Spielpläne einlesen
-  - Alle Spieltage der 1. bis 3. Bundesliga inklusive Datum, Uhrzeit, Heim- und Auswärtsteam.
-2. Team-Städte auf Bahnhöfe mappen
-  - Jeder Mannschaft wird die entsprechende Stadt zugeordnet und der nächstgelegene Bahnhof identifiziert.
-3. EVA-Nummern abrufen
-  - Mittels Deutsche Bahn Timetables API werden EVA-Nummern für die Bahnhöfe ermittelt, um Fahrpläne abzufragen.
-4. Zugverbindungen analysieren
-  - Relevante Zugverbindungen für jedes Spiel werden abgerufen.
-5. Fan-Auslastung simulieren
-  - Prognose von überfüllten Zügen und möglichen Treffpunkten rivalisierender Fangruppen.
-6. Visualisierung auf Karte
-  - Alle relevanten Bewegungen und Hotspots werden interaktiv auf einer Karte dargestellt:
-  - Start- und Zielbahnhöfe
-  - Zugverbindungen als Linien
-  - Bahnhöfe mit hoher Fanaufkommen als Heatmap
+
+1. **Spielpläne einlesen**  
+   - Import aller Spieltage der 1. bis 3. Bundesliga inklusive Datum, Uhrzeit, Heim- und Auswärtsteam.  
+
+2. **Team-Städte auf Bahnhöfe mappen**  
+   - Zuordnung jeder Mannschaft zu ihrer Heimstadt und Identifikation des nächstgelegenen Bahnhofs.  
+
+3. **EVA-Nummern abrufen**  
+   - Nutzung der **Deutsche Bahn Timetables API**, um EVA-Nummern (Bahnhofskennungen) für Fahrplanabfragen zu ermitteln.  
+
+4. **Zugverbindungen analysieren** *(in Entwicklung)*  
+   - Abfrage und Filterung relevanter Zugverbindungen zwischen den Städten der Spielbegegnungen.  
+
+5. **Fan-Auslastung simulieren** *(in Entwicklung)*  
+   - Simulation voraussichtlicher Fanbewegungen zur Ermittlung potenziell überfüllter Züge und Treffpunkte rivalisierender Gruppen.  
+
+6. **Visualisierung auf Karte** *(in Entwicklung)*  
+   - Interaktive Darstellung der Fanbewegungen auf einer Karte, inklusive:
+     - Start- und Zielbahnhöfen  
+     - Zugverbindungen als Linien  
+     - Heatmap mit Bahnhöfen hoher Fanfrequenz  
+
+---
+
+## Lernziele
+
+Das Projekt dient als praktische Übung zur Kombination von **Datenanalyse, API-Integration und Geovisualisierung**:
+
+- **Datenintegration:** Einlesen, Bereinigen und Strukturieren von Spielplänen und Bahndaten.  
+- **API-Nutzung:** Abrufen und Verarbeiten von XML-Daten über die **Deutsche Bahn Timetables API**.  
+- **Feature Engineering:** Herstellen semantischer Beziehungen zwischen Vereinen, Städten und Bahnhöfen.  
+- **Visual Analytics:** Erstellung interaktiver Karten mit Plotly zur Exploration von Mobilitätsmustern.  
+
+---
+
 ## Technologien
-- Python
-  - Pandas – für Datenmanagement der Spielpläne und Zugverbindungen
-  - Requests – zur Abfrage der DB-API
-  - xml.etree.ElementTree – zum Parsen der XML-Antworten der DB-API
-  - Plotly – interaktive Kartenvisualisierung
+
+- **Python**
+  - `pandas` – Datenmanagement und Transformation der Spiel- und Fahrplandaten  
+  - `requests` – Abfrage der Deutschen Bahn API  
+  - `xml.etree.ElementTree` – Parsing der XML-Antworten der DB-API  
+  - `plotly` – Interaktive Karten- und Heatmap-Visualisierung  
