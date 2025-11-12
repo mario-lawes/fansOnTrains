@@ -20,7 +20,7 @@ Konkret soll analysiert werden:
    - Zuordnung jeder Mannschaft zu ihrer Heimstadt und Identifikation des nächstgelegenen Bahnhofs.  
 
 3. **Fernverkehr-Verbindungen abrufen**  
-   - Nutzung der Daten von [DELFI e.V.](http://gtfs.de,de,latest-fv-free,info@gtfs.de,https://gtfs.de)
+   - Nutzung der Daten von [DELFI e.V.](http://gtfs.de)
 
 4. **Zugverbindungen analysieren** *(in Entwicklung)*  
    - Abfrage und Filterung relevanter Zugverbindungen zwischen den Städten der Spielbegegnungen.  
