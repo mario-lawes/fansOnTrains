@@ -19,8 +19,8 @@ Konkret soll analysiert werden:
 2. **Team-Städte auf Bahnhöfe mappen**  
    - Zuordnung jeder Mannschaft zu ihrer Heimstadt und Identifikation des nächstgelegenen Bahnhofs.  
 
-3. **EVA-Nummern abrufen**  
-   - Nutzung der **Deutsche Bahn Timetables API**, um EVA-Nummern (Bahnhofskennungen) für Fahrplanabfragen zu ermitteln.  
+3. **Fernverkehr-Verbindungen abrufen**  
+   - Nutzung der Daten von [DELFI e.V.](http://gtfs.de,de,latest-fv-free,info@gtfs.de,https://gtfs.de)
 
 4. **Zugverbindungen analysieren** *(in Entwicklung)*  
    - Abfrage und Filterung relevanter Zugverbindungen zwischen den Städten der Spielbegegnungen.  
